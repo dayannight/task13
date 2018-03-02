@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+//---------------------------混合器↓
+
+@mixin center-vertically{ //垂直居中
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+@mixin flex-vertical{//flex方法的垂直居中
+  display: flex;
+  align-items: center;
+}
+
+//-------------------------------↑
+
+
+
+
+//----------------------函数↓
+
+$border-style:#bfc0c1 1px solid ;//基础边框样式
+
+//----------------------------函数↑
+
+//---------------------------基本样式
+*{margin:0;padding:0}
+
+li{list-style:none}
+
+img{vertical-align:top;border:none}
+a{
+  text-decoration: none;
+}
+button{
+  border: none;
+  outline: none;
+}

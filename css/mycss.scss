@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+html{
+    font-size: 62.5%;
+    width: 100%;
+}
+body{
+    background-color:#f0f0f0;
+    width: 100%;
+}
+
+@import "basis.scss";//导入自己的库文件
+
+header{
+    z-index: 0;
+    background-color:#34bddd;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    #menu{
+
+        &:checked ~ .nav {
+            background-color: red;
+            transition:ease 500ms;
+        }
+    }
+    img{
+        display: block;
+        transform: scale(.8);
+        margin-left: 1rem;
+        z-index: 100;
+    }
+}
+
+main{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+.lastgeme{
+    position: relative;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: $border-style ;
+    text-align: center;
+    margin: 15px;
+    .lastgame-span2{
+        @include center-vertically;
+        right: 1%;
+        font-size: 5vw;
+        color: #adadad;
+    }
+}
+.chosegame{//选择游戏
+    position: relative;
+    border: $border-style ;
+    background-color: white;
+    margin: 0 15px 5rem 15px;
+
+}
+.chosegame-title{//捉鬼游戏标题
+    line-height: 5.5vw;
+    font-size: 4vw;
+    color: #f8b445;
+    text-align: center;
+    border-bottom:#f8b445 1px solid;
+}
+.content{
+    text-align: center;
+    font-size:12px;
+
+    button{
+        margin: 10px 0;
+        width: 35vw;
+        height: 10vw;
+        background-color: #34bddd;
+        color: white;
+        font-size:4.7vw;
+        &:hover{
+            background-color: #61ddeb;
+            cursor: pointer;
+        }
+
+    }
+    .jump-point{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: $border-style;
+        border-radius: 50%;
+        margin: 3px 1px;
+        &:hover{
+            background-color: #bfc0c1;
+        }
+    }
+    img{
+        @include center-vertically;
+        transform: translateY(-50%) scale(.7);
+
+        right: 2%;
+    }
+
+}
+.nav{
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    height:100%;
+    width: 80vw;
+    background-color: white;
+    ul li{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: $border-style;
+        line-height: 6vw;
+        padding-right: 15px;
+        font-size: 6vw;
+        color: #34bddd;
+
+    }
+}
+.li-right{
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+
+    img{
+        width: 3vw;
+        height: 3vw;
+        margin: 0 10px;
+    }
+
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    z-index: 200;
+    span{
+        position: relative;
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #fff;
+        float: left;
+        transform-origin: center;
+        transition: transform 250ms ease;
+        z-index: 200;
+    }
+    span:nth-of-type(1) {
+        transform: translateY(-5px);
+    }
+    span:nth-of-type(3) {
+        transform: translateY(5px);
+    }
+}
+#menu{
+    display: none;
+    &:checked .nav{
+        left: 0;
+        transition: left 500ms ease;
+    }
+    &:checked .menu{
+        background-color: red;
+        transform: rotate(360deg);
+        transition: transform 500ms ease;
+}
+}
+
