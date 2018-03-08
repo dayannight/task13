@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import "type";
+@import "basis";
+header{
+  @include flex-center;
+  justify-content: space-between;
+  font-size: 16px;
+  border-bottom: white 1px solid;
+
+}
+.results{
+  background-color: #34bddd;
+  margin-top: 5rem;
+  padding: 5rem 3rem 3rem 3rem;
+  .champion{
+
+    text-align: center;
+    position: relative;
+    img{
+      width: 180px;
+      height: 110px;
+    }
+    span{
+      display: block;
+      color: white;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  & > p{
+    color: #f8b445;
+  }
+}
+
+
+.statistics{
+  color: white;
+  margin-top: 2rem;
+  p{
+    display: flex;
+    flex-wrap: wrap;
+    span{
+      flex-basis: 33.33%;
+    }
+  }
+}
+.list{
+  margin-bottom: 7rem;
+  background-color: white;
+  color: #bfc0c1;
+  ul ul{
+    padding: 0 3rem 1rem 3rem;
+
+    border-bottom: 1px solid #aaaaaa;
+
+  }
+}
+.li-title{
+  padding: 1rem 0;
+}
+.li-title-1{
+  color: black;
+}
+.li-title-2{
+  float: right;
+  font-size: 12px;
+  color: #bfc0c1;
+}
+footer{
+  background-color: rgba(52,189,221,0.5);
+  height: calc(7rem + 1px);
+  position: fixed;
+  bottom: 0;right: 0;left: 0;
+  @include flex-center;
+  justify-content: space-around;
+  .btn-restart{
+    flex-basis: 35%;
+    border-radius: 1.5rem;
+    font-size:18px;
+    height: 3rem;
+    color: white;
+    background-color: #f37072;
+  }
+  .btn-up{
+    flex-basis: 35%;
+    border-radius: 1.5rem;
+    font-size:18px;
+    height: 3rem;
+    color: white;
+    background-color: #f8b445
+  }
+}

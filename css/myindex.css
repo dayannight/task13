@@ -1,0 +1,266 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #f0f0f0;
+  font-size: 16px; }
+
+header {
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #34bddd;
+  height: 5rem; }
+  header img {
+    transform: scale(0.7); }
+
+/*
+  Document   : CSS样式初始化
+  Created on : 2016. 8. 7,09:41:00
+  Author :
+  Description:
+  CSS样式表的初始化，全局样式设置。部分样式属性请根据具体页面重置其属性
+      导入方式：<link href="css/common.css" rel="stylesheet" type="text/css" /> */
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+  margin: 0;
+  padding: 0; }
+
+/* 初始化标签在所有浏览器中的margin、padding值 */
+fieldset, img {
+  border: 0 none; }
+
+/* 重置fieldset（表单分组）、图片的边框为0*/
+dl, ul, ol, menu, li {
+  list-style: none; }
+
+/* 重置类表前导符号为onne,menu在HTML5中有效 */
+blockquote, q {
+  quotes: none; }
+
+/* 重置嵌套引用的引号类型 */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* 重置嵌套引用*/
+input, select, textarea, button {
+  vertical-align: middle; }
+
+/* 重置表单控件垂直居中*/
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer; }
+
+/* 重置表单button按钮效果 */
+body {
+  background: #fff; }
+
+/* 重置body 页面背景为白色 */
+body, th, td, input, select, textarea, button {
+  font-size: 12px;
+  line-height: 1;
+  font-family: "微软雅黑", "黑体","宋体";
+  color: #666; }
+
+/* 重置页面文字属性 */
+a {
+  color: #666;
+  text-decoration: none; }
+
+/* 重置链接a标签 */
+a:active, a:hover {
+  text-decoration: none; }
+
+/* 重置链接a标签的鼠标滑动效果 */
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal; }
+
+/* 重置样式标签的样式 */
+caption {
+  display: none; }
+
+/* 重置表格标题为隐藏 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed; }
+
+/* 重置table属性 */
+img {
+  vertical-align: top; }
+
+/* 图片在当前行内的垂直位置 */
+/* 页面设置 */
+/* 取消a标签点击后的虚线框 */
+a {
+  outline: none; }
+
+a:active {
+  star: expression(this.onFocus=this.blur()); }
+
+/* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
+/*
+::selection {color: #fff;background-color: #4C6E78;}
+::-moz-selection {color: #fff;background-color: #4C6E78;}
+*/
+/*清除浮动*/
+.clear {
+  clear: both; }
+
+/*清除浮动--推荐使用*/
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+header {
+  display: flex;
+  align-items: center; }
+  header #menu:checked ~ .nav {
+    background-color: red;
+    transition: ease 500ms; }
+
+main {
+  transform: translateX(0px);
+  transition: transform 500ms ease;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0; }
+
+.lastgeme {
+  height: 8vw;
+  position: relative;
+  font-size: 4.5vw;
+  font-weight: lighter;
+  color: #bfc0c1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: #bfc0c1 1px solid;
+  margin: 6.5rem 15px 15px 15px; }
+
+.lastgeme-span2 {
+  position: absolute;
+  right: 1%; }
+
+.chosegame {
+  position: relative;
+  border: #bfc0c1 1px solid;
+  background-color: white;
+  margin: 0 15px 5rem 15px; }
+
+.chosegame-title {
+  line-height: 5.5vw;
+  font-size: 4vw;
+  color: #f8b445;
+  text-align: center;
+  border-bottom: #f8b445 1px solid; }
+
+.content {
+  text-align: center;
+  font-size: 12px; }
+  .content button {
+    margin: 10px 0;
+    width: 35vw;
+    height: 10vw;
+    background-color: #34bddd;
+    color: white;
+    font-size: 4.7vw; }
+    .content button:hover {
+      background-color: #61ddeb;
+      cursor: pointer; }
+  .content .jump-point {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: #bfc0c1 1px solid;
+    border-radius: 50%;
+    margin: 3px 1px; }
+    .content .jump-point:hover {
+      background-color: #bfc0c1; }
+  .content img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateY(-50%) scale(0.7);
+    right: 2%; }
+
+.nav {
+  transition: left 500ms ease;
+  box-shadow: #a0a1a2 -2px 0 10px inset;
+  position: fixed;
+  top: 5rem;
+  left: -80vw;
+  height: 100%;
+  width: 80vw;
+  background-color: white;
+  z-index: 200; }
+  .nav ul li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #bfc0c1 1px solid;
+    line-height: 6vw;
+    padding-right: 15px;
+    font-size: 6vw;
+    color: #34bddd; }
+    .nav ul li:hover img {
+      transform: scale(1.2); }
+
+.li-right {
+  display: flex;
+  align-items: center;
+  font-size: 3vw; }
+  .li-right img {
+    width: 3vw;
+    height: 3vw;
+    margin: 0 10px; }
+
+.menu {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  z-index: 200; }
+  .menu span {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #fff;
+    float: left;
+    transform-origin: center;
+    transition: transform 250ms ease;
+    z-index: 200; }
+  .menu span:nth-of-type(1) {
+    transform: translateY(-5px); }
+  .menu span:nth-of-type(3) {
+    transform: translateY(5px); }
+
+#menu {
+  display: none; }
+  #menu:checked ~ .nav {
+    left: 0;
+    transition: left 500ms ease; }
+  #menu:checked ~ main {
+    transform: translateX(80vw);
+    transition: transform 500ms ease; }
+
+/*# sourceMappingURL=myindex.css.map */

@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import "type";
+@import "basis";
+body{
+  background-color:#34bddd;
+  overflow-x: hidden;
+  height: 100vw;
+
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  color: white;
+  padding: 0 1%;
+  img{
+    cursor: pointer;
+  }
+}
+main{
+  position: relative;
+  top: 5rem;
+  color: black;
+  font-size: 14px;
+  padding-bottom: 10rem;
+}
+.main-head{
+  height: 5rem;
+  @include flex-center;
+  justify-content: space-between;
+  background-color: #bae9f4;
+  padding: 0 5px 0 3rem;
+  a{
+    background-color: #f3c881;
+    border-radius: 50%;
+    img{
+      transform: scale(.6);
+      position: relative;
+      left:2px;
+    }
+  }
+
+}
+.main-head-bottom{
+  padding-left:3rem;
+  font-size: 12px;
+  color: white;
+}
+.content{
+  width: 100%;
+  padding: 0 2%;}
+.ct-blk{
+  &:hover .blk-icongroup{
+    transform: translateY(120%);
+
+  }
+  background-color: white;
+  position: relative;
+  width: 26%;
+  height: 25.5vw;
+  float: left;
+  @include flex-center;
+  flex-direction: column;
+  margin: 3.5% 3%;
+  .blk-job{
+    width: 95%;
+    font-size: 4vw;
+    flex-basis: 72%;
+    background-color:#f3c881;
+    @include flex-center;
+  }
+  .blk-nub{
+    width: 95%;
+    font-size: 4vw;
+    flex-basis: 23%;
+    color: white;
+    background-color: #82af9b;
+    @include flex-center;
+  }
+  .blk-icongroup{
+    transition:transform ease 800ms ;
+
+    z-index: -99;
+    width: 100%;
+    position: absolute;
+    bottom:2%;
+    display: flex;
+    justify-content: space-between;
+    a{
+      position: relative;
+      flex-basis: 20%;
+      img{
+        position: relative;
+        width: 100%;
+      }
+    }
+
+  }
+}
+.phr{
+  width:100%;
+  height:11rem;
+  float: left;
+
+}
+
+footer{
+  z-index: 300;
+  height: 7vw;
+  min-height:6rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #34bddd;
+  @include flex-center;
+   a {
+     @include flex-center;
+    background-color: #f3c881;
+    color: white;
+    flex-basis: 70%;
+    height:5vw;
+    min-height: 4.5rem;
+    font-size: 16px;
+  }
+}

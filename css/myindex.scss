@@ -1,21 +1,8 @@
 @charset "utf-8";
-
-html{
-    font-size: 62.5%;
-    width: 100%;
-}
-body{
-    background-color:#f0f0f0;
-    width: 100%;
-}
-
+@import "type";
 @import "basis.scss";//导入自己的库文件
 
 header{
-    z-index: 0;
-    background-color:#34bddd;
-    height: 5rem;
-    width: 100%;
     display: flex;
     align-items: center;
     #menu{
@@ -25,36 +12,33 @@ header{
             transition:ease 500ms;
         }
     }
-    img{
-        display: block;
-        transform: scale(.8);
-        margin-left: 1rem;
-        z-index: 100;
-    }
 }
 
 main{
+    transform: translateX(0px);
+    transition: transform 500ms ease;
+
     z-index: 1;
     position: relative;
     width: 100%;
     background-color: #f0f0f0;
 }
 .lastgeme{
+    height: 8vw;
     position: relative;
-    font-size: 5vw;
+    font-size: 4.5vw;
+    font-weight: lighter;
+    color: #bfc0c1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     border: $border-style ;
-    text-align: center;
-    margin: 15px;
-    .lastgame-span2{
-        @include center-vertically;
-        right: 1%;
-        font-size: 5vw;
-        color: #adadad;
-    }
+    margin: 6.5rem 15px 15px 15px;
+}
+.lastgeme-span2{
+    position: absolute;
+    right: 1%;
 }
 .chosegame{//选择游戏
     position: relative;
@@ -69,6 +53,7 @@ main{
     color: #f8b445;
     text-align: center;
     border-bottom:#f8b445 1px solid;
+
 }
 .content{
     text-align: center;
@@ -107,13 +92,15 @@ main{
 
 }
 .nav{
-    z-index: 200;
+    transition: left 500ms ease;
+    box-shadow:#a0a1a2 -2px 0 10px  inset ;
     position: fixed;
-    top: 0;
+    top: 5rem;
     left: -80vw;
     height:100%;
     width: 80vw;
     background-color: white;
+    z-index: 200;
     ul li{
         display: flex;
         justify-content: space-between;
@@ -122,6 +109,9 @@ main{
         padding-right: 15px;
         font-size: 6vw;
         color: #34bddd;
+        &:hover img{
+            transform:scale(1.2);
+        }
 
     }
 }
@@ -138,6 +128,9 @@ main{
 
 }
 .menu{
+    position: fixed;
+    top:5px;
+    left:5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,14 +159,12 @@ main{
 }
 #menu{
     display: none;
-    &:checked .nav{
+    &:checked ~.nav{
         left: 0;
-        transition: left 500ms ease;
+         transition: left 500ms ease;
     }
-    &:checked .menu{
-        background-color: red;
-        transform: rotate(360deg);
+    &:checked ~main{
+        transform: translateX(80vw);
         transition: transform 500ms ease;
-}
-}
 
+    }}
