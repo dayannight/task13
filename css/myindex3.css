@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100vh; }
 
 body {
   background-color: #f0f0f0;
@@ -16,7 +17,7 @@ header {
   background-color: #34bddd;
   height: 5rem; }
   header img {
-    transform: scale(0.7); }
+    transform: scale(0.6); }
 
 /*
   Document   : CSS样式初始化
@@ -55,7 +56,8 @@ input, select, textarea, button {
 button {
   border: 0 none;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 /* 重置表单button按钮效果 */
 body {
@@ -145,7 +147,7 @@ header {
       display: block;
       color: white;
       position: absolute;
-      bottom: 1rem;
+      bottom: 1.5rem;
       left: 50%;
       transform: translateX(-50%); }
   .results > p {
@@ -155,6 +157,7 @@ header {
   color: white;
   margin-top: 2rem; }
   .statistics p {
+    margin-top: .5rem;
     display: flex;
     flex-wrap: wrap; }
     .statistics p span {
@@ -193,14 +196,12 @@ footer {
   footer .btn-restart {
     flex-basis: 35%;
     border-radius: 1.5rem;
-    font-size: 18px;
     height: 3rem;
     color: white;
     background-color: #f37072; }
   footer .btn-up {
     flex-basis: 35%;
     border-radius: 1.5rem;
-    font-size: 18px;
     height: 3rem;
     color: white;
     background-color: #f8b445; }

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100vh; }
 
 body {
   background-color: #f0f0f0;
@@ -16,7 +17,7 @@ header {
   background-color: #34bddd;
   height: 5rem; }
   header img {
-    transform: scale(0.7); }
+    transform: scale(0.6); }
 
 /*
   Document   : CSS样式初始化
@@ -55,7 +56,8 @@ input, select, textarea, button {
 button {
   border: 0 none;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 /* 重置表单button按钮效果 */
 body {
@@ -130,13 +132,15 @@ header {
     background-color: red;
     transition: ease 500ms; }
 
+body {
+  background-color: #f0f0f0; }
+
 main {
   transform: translateX(0px);
   transition: transform 500ms ease;
   z-index: 1;
   position: relative;
-  width: 100%;
-  background-color: #f0f0f0; }
+  width: 100%; }
 
 .lastgeme {
   height: 8vw;
@@ -153,6 +157,8 @@ main {
 
 .lastgeme-span2 {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   right: 1%; }
 
 .chosegame {
@@ -173,7 +179,7 @@ main {
   font-size: 12px; }
   .content button {
     margin: 10px 0;
-    width: 35vw;
+    width: 55vw;
     height: 10vw;
     background-color: #34bddd;
     color: white;
@@ -195,10 +201,12 @@ main {
     top: 50%;
     transform: translateY(-50%);
     transform: translateY(-50%) scale(0.7);
+    width: 3vw;
     right: 2%; }
 
 .nav {
-  transition: left 500ms ease;
+  display: none;
+  transition: left 300ms ease;
   box-shadow: #a0a1a2 -2px 0 10px inset;
   position: fixed;
   top: 5rem;
@@ -257,6 +265,7 @@ main {
 #menu {
   display: none; }
   #menu:checked ~ .nav {
+    display: block;
     left: 0;
     transition: left 500ms ease; }
   #menu:checked ~ main {

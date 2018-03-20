@@ -83,6 +83,8 @@ main{
     z-index: -99;
     width: 100%;
     position: absolute;
+    left: 0;
+    right: 0;
     bottom:2%;
     display: flex;
     justify-content: space-between;
@@ -122,4 +124,10 @@ footer{
     min-height: 4.5rem;
     font-size: 16px;
   }
+}
+@media all and (max-width:379px ){
+  .ct-blk{
+    margin: 3% 12%;
+  }
+
 }

@@ -14,6 +14,10 @@ header{
     }
 }
 
+body{
+    background-color: #f0f0f0;
+
+}
 main{
     transform: translateX(0px);
     transition: transform 500ms ease;
@@ -21,7 +25,6 @@ main{
     z-index: 1;
     position: relative;
     width: 100%;
-    background-color: #f0f0f0;
 }
 .lastgeme{
     height: 8vw;
@@ -37,7 +40,7 @@ main{
     margin: 6.5rem 15px 15px 15px;
 }
 .lastgeme-span2{
-    position: absolute;
+@include center-vertically;
     right: 1%;
 }
 .chosegame{//选择游戏
@@ -61,7 +64,7 @@ main{
 
     button{
         margin: 10px 0;
-        width: 35vw;
+        width: 55vw;
         height: 10vw;
         background-color: #34bddd;
         color: white;
@@ -86,13 +89,14 @@ main{
     img{
         @include center-vertically;
         transform: translateY(-50%) scale(.7);
-
+        width: 3vw;
         right: 2%;
     }
 
 }
 .nav{
-    transition: left 500ms ease;
+    display: none;
+    transition: left 300ms ease;
     box-shadow:#a0a1a2 -2px 0 10px  inset ;
     position: fixed;
     top: 5rem;
@@ -160,6 +164,7 @@ main{
 #menu{
     display: none;
     &:checked ~.nav{
+        display: block;
         left: 0;
          transition: left 500ms ease;
     }
