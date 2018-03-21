@@ -16,6 +16,8 @@ header {
   z-index: 100;
   background-color: #34bddd;
   height: 5rem; }
+  header span {
+    font-size: 20px; }
   header img {
     transform: scale(0.6); }
 
@@ -143,7 +145,7 @@ main {
   width: 100%; }
 
 .lastgeme {
-  height: 8vw;
+  height: 14vw;
   position: relative;
   font-size: 4.5vw;
   font-weight: lighter;
@@ -168,7 +170,7 @@ main {
   margin: 0 15px 5rem 15px; }
 
 .chosegame-title {
-  line-height: 5.5vw;
+  line-height: 7.5vw;
   font-size: 4vw;
   color: #f8b445;
   text-align: center;
@@ -177,14 +179,17 @@ main {
 .content {
   text-align: center;
   font-size: 12px; }
-  .content button {
-    margin: 10px 0;
-    width: 55vw;
-    height: 10vw;
+  .content a:nth-of-type(1), .content a:nth-of-type(2), .content a:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    width: 77vw;
+    height: 16vw;
     background-color: #34bddd;
     color: white;
     font-size: 4.7vw; }
-    .content button:hover {
+    .content a:nth-of-type(1):hover, .content a:nth-of-type(2):hover, .content a:nth-of-type(3):hover {
       background-color: #61ddeb;
       cursor: pointer; }
   .content .jump-point {
@@ -193,16 +198,16 @@ main {
     height: 8px;
     border: #bfc0c1 1px solid;
     border-radius: 50%;
-    margin: 3px 1px; }
+    margin: 10px 1px; }
     .content .jump-point:hover {
       background-color: #bfc0c1; }
   .content img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    transform: translateY(-50%) scale(0.7);
+    transform: translateY(-50%) scale(0.8);
     width: 3vw;
-    right: 2%; }
+    right: 1.5%; }
 
 .nav {
   display: none;
